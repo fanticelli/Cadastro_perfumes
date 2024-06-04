@@ -1,0 +1,141 @@
+<!-- Adaptação do arquivo index.html (5 pontos) -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="script.js" defer></script>
+  <title>JavaScript - DOM - Prática da Semana 03</title>
+</head>
+
+<body class="p-3 m-0 border-0">
+
+  <h1 class="text-center">Sistema de Cadastro de Perfumes</h1>
+  <hr>
+
+  <form name="form1" action="#" method="POST" class="row g-3 needs-validation" novalidate>
+
+    <!-- nome -->
+    <div class="col-md-6">
+      <label for="nome" class="form-label">Nome do Perfume</label>
+      <input type="text" name="nome" class="form-control" id="nome" placeholder="ex. Malbec" required>
+
+      <div class="invalid-feedback" id="feedbackNome">Informe o nome do Perfume.</div>
+    </div>
+
+    <!-- fabricante -->
+    <div class="col-md-6">
+      <label for="fabricante" class="form-label">Fabricante</label>
+      <input type="text" class="form-control" id="fabricante" placeholder="ex. Oboticario" required>
+
+      <div class="invalid-feedback">Informe a fabricante do Perfume.</div>
+    </div>
+
+    <!-- preço -->
+    <div class="col-md-6">
+      <label for="preco" class="form-label">Preço do Perfume</label>
+      <input type="text" class="form-control" id="preco" placeholder="100.00" pattern="^\d{1,4}(\.\d{2})$" min="50.00"
+        max="1000.00" required>
+
+      <div class="invalid-feedback">Insira um valor entre R$50,00 e R$1000,00.</div>
+    </div>
+
+    <!-- ano de lançamento -->
+    <div class="col-md-6">
+      <label for="anoLancamento" class="form-label">Ano de Lançamento</label>
+      <input type="text" class="form-control" id="anoLancamento" placeholder="2010" pattern="^(20)\d{2}$" required>
+
+      <div class="invalid-feedback">Informe um ano a partir de 2000.</div>
+    </div>
+
+    <!-- familia -->
+    <div class="col-md-6">
+
+      <label for="familia" class="custom-control custom-radio">Família Ofaltiva</label>
+
+        <div>
+          <input type="radio" class="custom-control-input" name="familia" id="amadeirada" value="Amadeirada" required>
+          <label class="custom-control-label" for="amadeirada">Amadeirada</label>
+        </div>
+
+        <div>
+          <input type="radio" class="custom-control-input" name="familia" id="aquatica" value="Aquática" required>
+          <label class="custom-control-label" for="aquatica">Aquática</label>
+        </div>
+
+        <div>
+          <input type="radio" class="custom-control-input" name="familia" id="citrica" value="Cítrica" required>
+          <label for="citrica" class="custom-control-label">Cítrica</label>
+        </div>
+
+        <div>
+          <input type="radio" class="custom-control-input" name="familia" id="floral" value="Floral" required>
+          <label for="floral" class="custom-control-label">Floral</label>
+        </div>
+
+
+     
+        <div>
+          <input type="radio" class="custom-control-input" name="familia" id="frutada" value="Frutada" required>
+          <label for="frutada" class="custom-control-label">Frutada</label>
+        </div>
+
+        <div>
+          <input type="radio" class="custom-control-input" name="familia" id="oriental" value="Oriental" required>
+          <label for="oriental" class="custom-control-label">Oriental</label>
+        </div>
+    
+
+      <div class="invalid-feedback" id="feedbackFamilia">Selecione a Família Ofaltiva do Perfume.</div>
+    </div>
+    </div>
+
+    <!-- categoria -->
+    <div class="col-md-6">
+      <label for="categoria" class="form-label">Categoria</label>
+
+      <select id="categoria" class="form-control custom-select" required>
+        <option value="">Selecione a categoria...</option>
+        <option value="esportiva">Esportiva</option>
+        <option value="feminina">Feminina</option>
+        <option value="infantil">Infantil</option>
+        <option value="masculino">Masculino</option>
+        <option value="unissex">Unissex</option>
+      </select>
+
+      <div class="invalid-feedback">Informe a categoria.</div>
+    </div>
+
+    <!-- botão -->
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <input type="submit" class="btn btn-primary me-md-2" value="Inserir" id="btnInserir">
+    </div>
+  </form>
+
+  <hr>
+
+  <table class="table table-striped" id="tabela">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Categoria</th>
+        <th scope="col">Família Ofaltiva</th>
+        <th scope="col">Fabricante</th>
+        <th scope="col">Lançamento</th>
+        <th scope="col">Preço</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
+
+</body>
+
+</html>
